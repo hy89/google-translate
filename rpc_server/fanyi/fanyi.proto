@@ -1,0 +1,9 @@
+// python -m grpc_tools.protoc --python_out=. --grpc_python_out=. -I. fanyi.proto
+syntax = "proto3";
+package fanyi;
+service Translate {
+  rpc DoTranslate(Data) returns (Data){}
+}
+message Data {
+  string text = 1;
+}
